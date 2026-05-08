@@ -21,18 +21,18 @@ jobs:
         with:
           context: ./Part5/app
           push: true
-          tags: chindris-mihai-alexandru/part5-app:latest
+          tags: mihaichindris/part5-app:latest
           
       - name: Build and push db-loader
         uses: docker/build-push-action@v5
         with:
           context: ./Part5/db-loader
           push: true
-          tags: chindris-mihai-alexandru/part5-db-loader:latest
+          tags: mihaichindris/part5-db-loader:latest
           
       - name: Build and push email
         uses: docker/build-push-action@v5
         with:
           context: ./Part5/email
           push: true
-          tags: chindris-mihai-alexandru/part5-email:latest
+          tags: mihaichindris/part5-email:latest
