@@ -21,21 +21,21 @@ jobs:
         with:
           context: ./Part5/app
           push: true
-          tags: mihaichindris/part5-app:latest
+          tags: ${{ secrets.docker_username }}/part5-app:latest
 
       - name: Build and push db-loader
         uses: docker/build-push-action@v5
         with:
           context: ./Part5/db-loader
           push: true
-          tags: mihaichindris/part5-db-loader:latest
+          tags: ${{ secrets.docker_username }}/part5-db-loader:latest
 
       - name: Build and push email
         uses: docker/build-push-action@v5
         with:
           context: ./Part5/email
           push: true
-          tags: mihaichindris/part5-email:latest
+          tags: ${{ secrets.docker_username }}/part5-email:latest
 
       - name: Push images to DockerHub
         run: |
