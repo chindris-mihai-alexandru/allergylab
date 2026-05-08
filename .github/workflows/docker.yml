@@ -36,3 +36,9 @@ jobs:
           context: ./Part5/email
           push: true
           tags: mihaichindris/part5-email:latest
+
+      - name: Push images to DockerHub
+        run: |
+          docker push ${{ secrets.docker_username }}/part5-app:latest
+          docker push ${{ secrets.docker_username }}/part5-db-loader:latest
+          docker push ${{ secrets.docker_username }}/part5-email:latest
