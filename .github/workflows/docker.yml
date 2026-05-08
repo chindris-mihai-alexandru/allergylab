@@ -42,3 +42,7 @@ jobs:
           docker push ${{ secrets.docker_username }}/part5-app:latest
           docker push ${{ secrets.docker_username }}/part5-db-loader:latest
           docker push ${{ secrets.docker_username }}/part5-email:latest
+
+  deploy:
+    needs: [build]
+    runs-on: ubuntu-latest
